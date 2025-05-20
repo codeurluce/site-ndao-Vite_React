@@ -5,12 +5,10 @@
 // -----------------------------------------------------------------------------------------
 
 import { useState, useRef, useEffect } from 'react';
-import React from 'react';
 import { Settings, X } from 'lucide-react'; // Icônes engrenage et croix
 import classNames from 'classnames'; // Pour gérer dynamiquement les classes CSS
 import { useLiturgical } from '../../contexts/LiturgicalContext';
 import { liturgicalThemes } from '../../types/liturgical';
-import { is } from 'date-fns/locale';
 
 
 export function SeasonIndicator() {
@@ -45,6 +43,7 @@ export function SeasonIndicator() {
 
       {/* Bulle indicateur de saison : affiche le nom de la saison + icône paramètres */}
       <div
+      ref={bubbleRef}
         className={classNames(
           "flex items-center gap-2 px-3 py-2 rounded-full shadow-md cursor-pointer",
           theme.bgColor, "text-white" // Couleur de fond dynamique selon la saison
@@ -57,7 +56,8 @@ export function SeasonIndicator() {
 
       {/* Panneau de sélection du temps liturgiques*/}
       {isOpen && (
-        <div className="absolute bottom-12 right-0 w-72 bg-white rounded-lg shadow-xl p-4 animate-fade-in">
+         
+        <div ref={panelRef} className="absolute bottom-12 right-0 w-72 bg-white rounded-lg shadow-xl p-4 animate-fade-in">
 
           {/* En-tête du panneau avec titre et bouton X de fermeture */}
           <div className="flex justify-between items-center mb-3">
