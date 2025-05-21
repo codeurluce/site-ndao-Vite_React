@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { BrowserRouter } from 'react-router-dom'
 import { SeasonIndicator } from './components/layout/SeasonIndicators.jsx'
 import { LiturgicalProvider } from './contexts/LiturgicalContext.jsx'
+import  Navbar  from './components/layout/Navbar.jsx'
 import './App.css'
 import './index.css'; // ou App.css selon ton organisation
 
@@ -12,7 +12,9 @@ function App() {
 
   return (
     <LiturgicalProvider>
-  
+     <BrowserRouter>
+    <Navbar />
+    </BrowserRouter>
     <SeasonIndicator />
  </LiturgicalProvider> )
 }
