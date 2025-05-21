@@ -9,8 +9,8 @@ export const liturgicalThemes = {
         textColor: 'text-liturgical-green-800',
         bgColor: 'bg-liturgical-green-500',
         accentColor: 'border-liturgical-green-500',
-    ringColor: 'focus:ring-liturgical-green-500',
-        
+        ringColor: 'focus:ring-liturgical-green-500',
+
         seasonName: 'Temps Ordinaire'
     },
     christKing: {
@@ -46,7 +46,7 @@ export const liturgicalThemes = {
         textColor: 'text-liturgical-white-800',
         bgColor: 'bg-liturgical-white-500',
         accentColor: 'border-liturgical-white-500',
-        ringColor: 'focus:ring-liturgical-white-500',  
+        ringColor: 'focus:ring-liturgical-white-500',
         seasonName: 'Temps de Noël'
     },
     ashWednesday: {
