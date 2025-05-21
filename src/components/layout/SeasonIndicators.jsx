@@ -16,12 +16,14 @@ export function SeasonIndicator() {
   const { theme, currentSeason, setManualSeason, isManualMode } = useLiturgical();
   const [isOpen, setIsOpen] = useState(false);   // État local pour savoir si le panneau est ouvert ou non
 
-  const panelRef = useRef(null); // Référence pour le panneau de sélection de saison
-  const bubbleRef = useRef(null); // Référence pour la bulle indicateur de saison
+  
 
   const toggleOpen = () => setIsOpen(!isOpen);   // Fonction pour ouvrir/fermer le panneau
 
   // Fonction pour fermer le panneau de sélection de saison si on clique en dehors de celui-ci
+  const panelRef = useRef(null); // Référence pour le panneau de sélection de saison
+  const bubbleRef = useRef(null); // Référence pour la bulle indicateur de saison
+  
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (panelRef.current && !panelRef.current.contains(event.target) && bubbleRef.current && !bubbleRef.current.contains(event.target)) {

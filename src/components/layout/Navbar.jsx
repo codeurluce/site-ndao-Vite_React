@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Search, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -23,10 +23,28 @@ const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
-  const { theme } = useLiturgical();
-  const { currentColor } = useLiturgical();
+  const { currentColor, theme } = useLiturgical();
+  const searchRef = useRef(null); // Référence pour la zone de recherche
 
-  useEffect(() => {
+
+useEffect(() => {
+  function handleClickOutside(event) {
+    if (searchRef.current && !searchRef.current.contains(event.target)) {
+      setIsSearchOpen(false);
+    }
+  }
+
+  if (isSearchOpen) {
+    document.addEventListener('mousedown', handleClickOutside);
+  } else {
+    document.removeEventListener('mousedown', handleClickOutside);
+  }
+  return () => {
+    document.removeEventListener('mousedown', handleClickOutside);
+  };
+}, [isSearchOpen]);
+
+useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
@@ -41,16 +59,6 @@ const Navbar = () => {
 
   const getNavbarColors = () => {
     return isScrolled ? 'bg-white shadow-md' : 'bg-transparent';
-  };
-
-  const getLinkColors = (isActive, highlight = false) => {
-    if (highlight) {
-      return 'text-liturgical-amber-600 hover:text-liturgical-amber-700';
-    }
-    if (isActive) {
-      return `text-liturgical-${currentColor}-600`;
-    }
-    return `text-gray-800 hover:text-liturgical-${currentColor}-600`;
   };
 
   const navbarClasses = `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${getNavbarColors()} ${
@@ -80,6 +88,11 @@ const Navbar = () => {
                 Notre Dame des Anges <br></br> de Ouakam
             </span>
           </Link>
+
+
+
+
+
 
 {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-4">
@@ -158,6 +171,7 @@ const Navbar = () => {
       <AnimatePresence>
         {isSearchOpen && (
           <motion.div
+          ref={searchRef}
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -180,7 +194,7 @@ const Navbar = () => {
               </button>
             </form>
           </motion.div>
-        )}
+    )}
       </AnimatePresence>
     </nav>
   );
