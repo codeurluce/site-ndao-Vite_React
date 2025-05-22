@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Instagram, Youtube } from 'lucide-react';
 import { useLiturgical } from '../../contexts/LiturgicalContext';
 import { Link } from 'react-router-dom';
 
@@ -19,7 +19,7 @@ export function Footer() {
               </li>
               <li className="flex items-center">
                 <Phone className="mr-2 flex-shrink-0" size={18} />
-                <span>+221 XX XXX XX XX</span>
+                <span>+221 33 860 16 73</span>
               </li>
               <li className="flex items-center">
                 <Mail className="mr-2 flex-shrink-0" size={18} />
@@ -77,7 +77,7 @@ export function Footer() {
           <div>
             <h3 className="font-playfair text-xl font-bold mb-4">Suivez-nous</h3>
             <div className="flex space-x-4 mb-6">
-              <a href="#" className="hover:text-amber-300 transition-colors">
+              <a href="https://www.facebook.com/p/Notre-Dame-des-Anges-Ouakam-100064835822386/?locale=fr_FR" className="hover:text-amber-300 transition-colors">
                 <Facebook size={24} />
               </a>
               <a href="#" className="hover:text-amber-300 transition-colors">
