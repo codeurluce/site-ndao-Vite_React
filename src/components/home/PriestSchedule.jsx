@@ -47,12 +47,12 @@ export function PriestSchedule() {
   const { theme } = useLiturgical();
 
   return (
-    <section id="horaires" className="py-16 bg-white">
+    <section id="horaires" className="py-16 bg-white mt-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* En-tête inchangé */}
         <div className="flex items-center justify-center gap-2 mb-12">
           <Calendar size={28} className={theme.textColor} />
-          <h2 className="text-3xl font-bold text-center">
+          <h2 className="text-3xl font-bold text-center ">
             Permanence des prêtres
           </h2>
         </div>

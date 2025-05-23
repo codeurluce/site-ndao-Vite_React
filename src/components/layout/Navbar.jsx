@@ -82,25 +82,17 @@ const Navbar = () => {
         <nav className={navbarClasses}>
             <div className="container mx-auto px-4">
                 <div className="flex justify-between items-center">
-                    {/* Logo et nom de l'Eglise */}
                     <div className="flex inline-grid">
-                        <Link to="/" className="flex items-center">
-                            <img src="../../public/icons/eglise.png" alt="icon" className="w-16 mr-4" />
-                            <span className={`font-playfair font-bold text-xl md:text-2xl text-liturgical-${currentColor}-600`}>
-                                Notre Dame des Anges <br></br> Ouakam
-                            </span>
-                        </Link>
-                        <div
-                            className={`
-        flex flex-col items-start mt-2 ml-4 lg:ml-8
-        overflow-hidden transition-all duration-500 ease-in-out
-        ${isScrolled ? 'max-h-0' : 'max-h-20'}
-    `}
-                        >
+{/* Gerer archidiocese et le doyenné */}
+                        <div className={`flex flex-col items-start mb-2 ml-4 lg:ml-2
+                                        overflow-hidden transition-all duration-500 ease-in-out
+                                        ${isScrolled ? 'max-h-0' : 'max-h-20'}
+                                        `}>
+
                             {/* Archidiocèse */}
                             <div className="flex items-center mb-1">
-                                <img src="../../public/icons/archidioceseLogo.jpeg" alt="icon" className="w-4 mr-2" />
-                                <span className={`font-playfair text-[10px] md:text-sm text-liturgical-${currentColor}-600`}>
+                                <img src="../../public/icons/archidioceseLogo1.png" alt="icon" className="w-4 mr-2" />
+                                <span className={`font-serif font-normal text-xs`}>
                                     Archidiocèse de Dakar
                                 </span>
                             </div>
@@ -108,11 +100,25 @@ const Navbar = () => {
                             {/* Doyennée */}
                             <div className="flex items-center">
                                 <img src="../../public/icons/localisation1.png" alt="icon" className="w-4 mr-2" />
-                                <span className={`font-playfair text-[10px] md:text-sm text-liturgical-${currentColor}-600`}>
+                                <span className={`font-serif font-normal text-xs`}>
                                     Doyennée Grand Dakar/Yoff
                                 </span>
                             </div>
                         </div>
+{/* Logo et nom de l'Eglise */}
+                        <Link to="/" className="flex items-center">
+                            <img src="../../public/icons/eglise.png" alt="icon" className="w-8 mr-4" />
+                            <span className={`font-serif font-bold text-xl md:text-xs text-liturgical-${currentColor}-600`}>
+                                Notre Dame des Anges <br />
+                                <span className="font-serif font-normal text-xs">
+                                    Ouakam
+                                </span>
+                            </span>
+
+                        </Link>
+
+
+
 
 
                     </div>
