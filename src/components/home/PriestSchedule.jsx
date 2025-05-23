@@ -15,7 +15,7 @@ const priestSchedule = [
       { day: "Mercredi", hours: "14h00 - 17h00" },
       { day: "Vendredi", hours: "9h00 - 12h00" }
     ],
-    image: "https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    image: "../../public/pretres/Abbegabriel2.jpg" 
   },
   {
     id: 2,
@@ -26,20 +26,20 @@ const priestSchedule = [
       { day: "Jeudi", hours: "14h00 - 17h00" },
       { day: "Samedi", hours: "9h00 - 12h00" }
     ],
-    image: "https://images.pexels.com/photos/3972755/pexels-photo-3972755.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    image: "../../public/pretres/AbbelouisPaul.jpg"
   },{
     id: 3,
     name: "Abbé Augustin Sambou",
     role: "Etudiant-Residant",
     availability: [ ],
-    image: "https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    image: "../../public/pretres/AbbeAugustin.jpg"
   },
   {
     id: 4,
     name: "Abbé Victor D. Faye",
     role: "Etudiant-Residant",
     availability: [ ],
-    image: "https://images.pexels.com/photos/3972755/pexels-photo-3972755.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    image: "../../public/pretres/Abbédiomaye.jpg" 
   }
 ];
 
