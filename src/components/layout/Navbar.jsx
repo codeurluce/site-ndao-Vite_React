@@ -92,7 +92,7 @@ const Navbar = () => {
                         </Link>
                         <div
                             className={`
-        hidden lg:flex flex-col items-start mt-2 ml-8
+        flex flex-col items-start mt-2 ml-4 lg:ml-8
         overflow-hidden transition-all duration-500 ease-in-out
         ${isScrolled ? 'max-h-0' : 'max-h-20'}
     `}
