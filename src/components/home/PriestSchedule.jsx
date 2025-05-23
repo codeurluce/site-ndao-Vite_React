@@ -15,7 +15,7 @@ const priestSchedule = [
       { day: "Mercredi", hours: "14h00 - 17h00" },
       { day: "Vendredi", hours: "9h00 - 12h00" }
     ],
-    image: "../../public/pretres/Abbegabriel2.jpg" 
+    image: "../../public/pretres/Abbegabriel1.jpg" 
   },
   {
     id: 2,
@@ -42,16 +42,6 @@ const priestSchedule = [
     image: "../../public/pretres/Abbédiomaye.jpg" 
   }
 ];
-
-
-
-
-
-
-
-
-
-
 
 export function PriestSchedule() {
   const { theme } = useLiturgical();
