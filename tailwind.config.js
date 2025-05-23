@@ -108,6 +108,10 @@ export default {
           '100%': { transform: 'translateX(0)', opacity: '1' },
         },
       },
+      fontSize: {
+        'xxs': '0.625rem', // 10px
+        'tiny': '0.5rem',  // 8px
+      },
     },
   },
   plugins: [],

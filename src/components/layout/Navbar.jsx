@@ -82,12 +82,29 @@ const Navbar = () => {
         <nav className={navbarClasses}>
             <div className="container mx-auto px-4">
                 <div className="flex justify-between items-center">
-                    <Link to="/" className="flex items-center"> 
-                        <img src="../../public/icons/eglise.png" alt="icon" className="w-16 mr-4" />
-                        <span className={`font-playfair font-bold text-xl md:text-2xl text-liturgical-${currentColor}-600`}>
-                            Notre Dame des Anges <br></br> Ouakam
+                    {/* Logo and Church Name */}
+                    <div className="flex inline-grid">
+                        <Link to="/" className="flex items-center">
+                            <img src="../../public/icons/eglise.png" alt="icon" className="w-16 mr-4" />
+                            <span className={`font-playfair font-bold text-xl md:text-2xl text-liturgical-${currentColor}-600`}>
+                                Notre Dame des Anges <br></br> Ouakam
+                            </span>
+                        </Link>
+                        <div className="hidden lg:flex items-center mt-2 ml-8">
+                        <img src="../../public/icons/archidioceseLogo.jpeg" alt="icon" className="w-4 mr-4" />
+                        <span className={`font-playfair text-[10px] md:text-sm text-liturgical-${currentColor}-600`}>
+                            Archidiocèse de Dakar
                         </span>
-                    </Link>
+                        </div>
+
+                        <div className="hidden lg:flex items-center mt-2 ml-8">
+                        <img src="../../public/icons/localisation1.png" alt="icon" className="w-4 mr-4" />
+                        <span className={`font-playfair text-[10px] md:text-sm text-liturgical-${currentColor}-600`}>
+                            Doyennée Grand Dakar/Yoff
+                        </span>
+                        </div>
+
+                    </div>
 
                     {/* Desktop Navigation */}
                     <div className="hidden lg:flex items-center space-x-4">
