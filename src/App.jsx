@@ -4,6 +4,7 @@ import { SeasonIndicator } from './components/layout/SeasonIndicators.jsx'
 import { LiturgicalProvider } from './contexts/LiturgicalContext.jsx'
 import  Navbar  from './components/layout/Navbar.jsx'
 import Footer from './components/layout/Footer.jsx'
+import HomePage from './components/pages/HomePage.jsx'
 import './App.css'
 import './index.css'; // ou App.css selon ton organisation
 
@@ -16,6 +17,7 @@ function App() {
           <Navbar />
           <div className="flex-grow">
             <SeasonIndicator />
+            <HomePage />
           </div>
           <Footer />
         </div>
