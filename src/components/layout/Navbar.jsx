@@ -90,20 +90,30 @@ const Navbar = () => {
                                 Notre Dame des Anges <br></br> Ouakam
                             </span>
                         </Link>
-                        {/* logo and nom de l'Archdiocese */}
-                        <div className="hidden lg:flex items-center mt-2 ml-8">
-                            <img src="../../public/icons/archidioceseLogo.jpeg" alt="icon" className="w-4 mr-4" />
-                            <span className={`font-playfair text-[10px] md:text-sm text-liturgical-${currentColor}-600`}>
-                                Archidiocèse de Dakar
-                            </span>
+                        <div
+                            className={`
+        hidden lg:flex flex-col items-start mt-2 ml-8
+        overflow-hidden transition-all duration-500 ease-in-out
+        ${isScrolled ? 'max-h-0' : 'max-h-20'}
+    `}
+                        >
+                            {/* Archidiocèse */}
+                            <div className="flex items-center mb-1">
+                                <img src="../../public/icons/archidioceseLogo.jpeg" alt="icon" className="w-4 mr-2" />
+                                <span className={`font-playfair text-[10px] md:text-sm text-liturgical-${currentColor}-600`}>
+                                    Archidiocèse de Dakar
+                                </span>
+                            </div>
+
+                            {/* Doyennée */}
+                            <div className="flex items-center">
+                                <img src="../../public/icons/localisation1.png" alt="icon" className="w-4 mr-2" />
+                                <span className={`font-playfair text-[10px] md:text-sm text-liturgical-${currentColor}-600`}>
+                                    Doyennée Grand Dakar/Yoff
+                                </span>
+                            </div>
                         </div>
-                        {/* logo and nom du doyennée */}  
-                        <div className="hidden lg:flex items-center mt-2 ml-8">
-                            <img src="../../public/icons/localisation1.png" alt="icon" className="w-4 mr-4" />
-                            <span className={`font-playfair text-[10px] md:text-sm text-liturgical-${currentColor}-600`}>
-                                Doyennée Grand Dakar/Yoff
-                            </span>
-                        </div>
+
 
                     </div>
 
