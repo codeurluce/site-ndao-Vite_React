@@ -1,6 +1,8 @@
 // Un objet JavaScript qui associe à chaque saison liturgique 
 // (temps ordinaire, avent, carême, noël, etc.) un ensemble de propriétés de thème.
 
+import { hover } from "framer-motion";
+
 export const liturgicalThemes = {
 
     ordinary: {
@@ -9,8 +11,8 @@ export const liturgicalThemes = {
         textColor: 'text-liturgical-green-800',
         bgColor: 'bg-liturgical-green-500',
         accentColor: 'border-liturgical-green-500',
+        hoverBgColor: 'hover:bg-liturgical-green-50',
         ringColor: 'focus:ring-liturgical-green-500',
-
         seasonName: 'Temps Ordinaire'
     },
     christKing: {
@@ -18,6 +20,7 @@ export const liturgicalThemes = {
         color: 'liturgical-white',
         textColor: 'text-liturgical-white-800',
         bgColor: 'bg-liturgical-white-500',
+        hoverBgColor: 'hover:bg-liturgical-white-50',
         accentColor: 'border-liturgical-white-500',
         ringColor: 'focus:ring-liturgical-white-500',
         seasonName: 'Christ Roi'
@@ -27,6 +30,7 @@ export const liturgicalThemes = {
         color: 'liturgical-violet',
         textColor: 'text-liturgical-violet-800',
         bgColor: 'bg-liturgical-violet-500',
+        hoverBgColor: 'hover:bg-liturgical-violet-50',
         accentColor: 'border-liturgical-violet-500',
         ringColor: 'focus:ring-liturgical-violet-500',
         seasonName: "Temps de l'Avent"
@@ -36,6 +40,7 @@ export const liturgicalThemes = {
         color: 'liturgical-rose',
         textColor: 'text-liturgical-rose-800',
         bgColor: 'bg-liturgical-rose-500',
+        hoverBgColor: 'hover:bg-liturgical-rose-50',
         accentColor: 'border-liturgical-rose-500',
         ringColor: 'focus:ring-liturgical-rose-500',
         seasonName: 'Dimanche de la Joie (Avent)'
@@ -45,6 +50,7 @@ export const liturgicalThemes = {
         color: 'liturgical-white',
         textColor: 'text-liturgical-white-800',
         bgColor: 'bg-liturgical-white-500',
+        hoverBgColor: 'hover:bg-liturgical-white-50',
         accentColor: 'border-liturgical-white-500',
         ringColor: 'focus:ring-liturgical-white-500',
         seasonName: 'Temps de Noël'
@@ -54,6 +60,7 @@ export const liturgicalThemes = {
         color: 'liturgical-violet',
         textColor: 'text-liturgical-violet-800',
         bgColor: 'bg-liturgical-violet-500',
+        hoverBgColor: 'hover:bg-liturgical-violet-50',
         accentColor: 'border-liturgical-violet-500',
         ringColor: 'focus:ring-liturgical-violet-500',
         seasonName: 'Mercredi des Cendres'
@@ -63,6 +70,7 @@ export const liturgicalThemes = {
         color: 'liturgical-violet',
         textColor: 'text-liturgical-violet-800',
         bgColor: 'bg-liturgical-violet-500',
+        hoverBgColor: 'hover:bg-liturgical-violet-50',
         accentColor: 'border-liturgical-violet-500',
         ringColor: 'focus:ring-liturgical-violet-500',
         seasonName: 'Temps de Carême'
@@ -72,6 +80,7 @@ export const liturgicalThemes = {
         color: 'liturgical-rose',
         textColor: 'text-liturgical-rose-800',
         bgColor: 'bg-liturgical-rose-500',
+        hoverBgColor: 'hover:bg-liturgical-rose-50',  
         accentColor: 'border-liturgical-rose-500',
         ringColor: 'focus:ring-liturgical-rose-500',
         seasonName: 'Dimanche de la Joie (Carême)'
@@ -81,6 +90,7 @@ export const liturgicalThemes = {
         color: 'liturgical-red',
         textColor: 'text-liturgical-red-800',
         bgColor: 'bg-liturgical-red-500',
+        hoverBgColor: 'hover:bg-liturgical-red-50',
         accentColor: 'border-liturgical-red-500',
         ringColor: 'focus:ring-liturgical-red-500',
         seasonName: 'Dimanche des Rameaux'
@@ -90,6 +100,8 @@ export const liturgicalThemes = {
         color: 'liturgical-white',
         textColor: 'text-liturgical-white-800',
         bgColor: 'bg-liturgical-white-500',
+               hoverBgColor: 'hover:bg-liturgical-white-200',
+
         accentColor: 'border-liturgical-white-500',
         ringColor: 'focus:ring-liturgical-white-500',
         seasonName: 'Jeudi Saint'
@@ -99,6 +111,7 @@ export const liturgicalThemes = {
         color: 'liturgical-red',
         textColor: 'text-liturgical-red-800',
         bgColor: 'bg-liturgical-red-500',
+        hoverBgColor: 'hover:bg-liturgical-red-50',
         accentColor: 'border-liturgical-red-500',
         ringColor: 'focus:ring-liturgical-red-500',
         seasonName: 'Vendredi Saint'
@@ -108,6 +121,8 @@ export const liturgicalThemes = {
         color: 'liturgical-white',
         textColor: 'text-liturgical-white-800',
         bgColor: 'bg-liturgical-white-500',
+                hoverBgColor: 'hover:bg-liturgical-white-200',
+
         accentColor: 'border-liturgical-white-500',
         ringColor: 'focus:ring-liturgical-white-500',
         seasonName: 'Temps Pâscal'
@@ -117,6 +132,7 @@ export const liturgicalThemes = {
         color: 'liturgical-red',
         textColor: 'text-liturgical-red-800',
         bgColor: 'bg-liturgical-red-500',
+        hoverBgColor: 'hover:bg-liturgical-red-50',
         accentColor: 'border-liturgical-red-500',
         ringColor: 'focus:ring-liturgical-red-500',
         seasonName: 'Pentecôte'
@@ -127,6 +143,7 @@ export const liturgicalThemes = {
         color: 'liturgical-blue',
         textColor: 'text-liturgical-blue-800',
         bgColor: 'bg-liturgical-blue-500',
+        hoverBgColor: 'hover:bg-liturgical-blue-50',
         accentColor: 'border-liturgical-blue-500',
         ringColor: 'focus:ring-liturgical-blue-500',
         seasonName: 'Fête Mariale'
@@ -137,6 +154,8 @@ export const liturgicalThemes = {
         color: 'liturgical-white',
         textColor: 'text-liturgical-white-800',
         bgColor: 'bg-liturgical-white-500',
+        hoverBgColor: 'hover:bg-liturgical-white-200',
+
         accentColor: 'border-liturgical-white-500',
         ringColor: 'focus:ring-liturgical-white-500',
         seasonName: 'Toussaint'

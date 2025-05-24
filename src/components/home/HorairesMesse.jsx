@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Calendar, Clock } from 'lucide-react';
 import { useLiturgical } from '../../contexts/LiturgicalContext';
 import { Timer } from 'lucide-react';
+import clsx from 'clsx';
 
 export const MassSchedule = () => {
   const [activeDay, setActiveDay] = useState('dimanche');
@@ -65,10 +66,10 @@ export const MassSchedule = () => {
             {days.map((day) => (
               <button
                 key={day.id}
-                className={`py-4 text-center font-medium transition-colors ${activeDay === day.id
-                  ? 'bg-burgundy-600 text-white'
-                  : 'hover:bg-burgundy-50 text-gray-700'
-                  }`}
+                className={clsx(`py-4 text-center font-medium transition-colors, ${activeDay === day.id
+                  ? `${theme.bgColor} text-white`
+                  : `${theme.hoverBgColor} text-gray-700`
+                  }`)}
                 onClick={() => setActiveDay(day.id)}
               >
                 {day.label}
