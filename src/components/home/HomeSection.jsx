@@ -43,12 +43,14 @@ export const HeroSection = () => {
             >
               Actualités
             </Button>
-            <Link to="/horaires-messes">
+            
+            
               <Button variant="outline" size="lg" className={`${theme.accentColor} hover:bg-white hover:bg-opacity-50`}>
-              <span className={theme.textColor}>Horaires des messes</span>
+              <a href="#horairesMesse">
+              <span className={theme.textColor}>Horaires des messes</span></a>
               </Button>
-            </Link>
-          </div>
+            
+                      </div>
         </motion.div>
       </div>
       

@@ -14,7 +14,7 @@ export default function HomePage() {
       <DailyReadings />
       <PhotoGallery /> */}
       <PriestSchedule />
-      <MassSchedule />
+        <MassSchedule />
     </div>
   );
 }
