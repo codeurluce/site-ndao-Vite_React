@@ -17,7 +17,6 @@ export const MassSchedule = () => {
 
   const scheduleData = {
     lundi: [
-      { time: '06:45', name: 'Messe du matin' },
       { time: '18:30', name: 'Messe du soir' }
     ],
     mardi: [
@@ -113,7 +112,7 @@ return (
             <p className="text-sm italic">Pas de messe programmée ce jour.</p>
           )}
 
-          <div className="mt-4 bg-gold-50 border-l-4 border-red-500 p-2 rounded-r">
+          <div className="mt-4 bg-yellow-100 border-l-4 border-red-500 p-2 rounded-r">
             <p className="text-xs text-gray-700">
               <span className="font-bold">Note :</span> Des changements peuvent survenir lors des fêtes liturgiques spéciales.
               Consultez les annonces paroissiales pour plus d'informations.
