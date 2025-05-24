@@ -23,8 +23,8 @@ export const HeroSection = () => {
           transition={{ duration: 0.8 }}
           className="max-w-3xl mx-auto"
         >
-          <h1 className="font-playfair text-5xl md:text-6xl font-bold mb-6">
-            Bienvenue à la Paroisse Notre Dame des Anges
+          <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6 mt-12 text-base">
+            Paroisse Notre Dame des Anges
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 text-blue-100">
