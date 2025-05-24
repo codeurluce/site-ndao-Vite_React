@@ -5,7 +5,14 @@ import { Timer } from 'lucide-react';
 import clsx from 'clsx';
 
 export const MassSchedule = () => {
-  const [activeDay, setActiveDay] = useState('dimanche');
+
+  // Obtenir le jour actuel en français (0 = dimanche, 1 = lundi, ..., 6 = samedi)
+  const getCurrentDayId = () => {
+    const dayIndex = new Date().getDay();
+    const daysInFrench = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
+    return daysInFrench[dayIndex];
+  };
+  const [activeDay, setActiveDay] = useState(getCurrentDayId());
   const { theme } = useLiturgical();
 
   const scheduleData = {
@@ -44,6 +51,8 @@ export const MassSchedule = () => {
     { id: 'samedi', label: 'Samedi' },
     { id: 'dimanche', label: 'Dimanche' }
   ];
+
+  
 // ...imports et logique inchangés
 
 return (
