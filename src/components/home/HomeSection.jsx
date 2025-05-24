@@ -2,8 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Button from '../other/Button';
+import { useLiturgical } from '../../contexts/LiturgicalContext';
+
 
 export const HeroSection = () => {
+  const { theme } = useLiturgical();
   return (
     <section className="relative min-h-screen bg-gradient-to-r from-stone-100  via-orange-200 to-stone-400 text-white">
       {/* Background Image with Overlay */}
@@ -36,12 +39,13 @@ export const HeroSection = () => {
               variant="primary" 
               size="lg" 
               onClick={() => document.getElementById('announcements')?.scrollIntoView({ behavior: 'smooth' })}
+              className={theme.bgColor}
             >
               Actualités
             </Button>
             <Link to="/horaires-messes">
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:bg-opacity-10">
-                Horaires des messes
+              <Button variant="outline" size="lg" className={`${theme.accentColor} hover:bg-white hover:bg-opacity-50`}>
+              <span className={theme.textColor}>Horaires des messes</span>
               </Button>
             </Link>
           </div>

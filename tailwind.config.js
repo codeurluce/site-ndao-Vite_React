@@ -7,6 +7,11 @@ export default {
         'sans': ['Inter', 'sans-serif'],
         'playfair': ['"Playfair Display"', 'serif'],
       },
+      fontFamily: {
+        'sans': ['Nunito Sans', 'sans-serif'],
+        'serif': ['Cormorant Garamond', 'serif'],
+
+      },
       colors: {
         liturgical: {
           green: {
@@ -86,7 +91,33 @@ export default {
             700: '#283C6F',
             800: '#1B284A',
             900: '#0D1425',
-          }
+          },
+          burgundy: {
+          50: '#faf5f6',
+          100: '#f5e5e8',
+          200: '#e8c7ce',
+          300: '#d9a2ad',
+          400: '#c77585',
+          500: '#b55367',
+          600: '#8B1E3F', // Primary
+          700: '#7a1a37',
+          800: '#65172d',
+          900: '#541829',
+          950: '#350d19',
+        },
+        gold: {
+          50: '#fcf9eb',
+          100: '#f8f0cc',
+          200: '#f2e399',
+          300: '#edd066',
+          400: '#E3B23C', // Primary
+          500: '#daa334',
+          600: '#c1832b',
+          700: '#9d6226',
+          800: '#814d25',
+          900: '#6c4024',
+          950: '#3e220f',
+        },
         }
       },
       animation: {

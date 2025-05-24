@@ -4,6 +4,7 @@ import { HeroSection } from '../home/HomeSection';
 // import { DailyReadings } from '../components/home/DailyReadings';
 // import { PhotoGallery } from '../components/home/PhotoGallery';
 import { PriestSchedule } from '../home/PriestSchedule';
+import { MassSchedule } from '../home/HorairesMesse';
 
 export default function HomePage() {
   return (
@@ -13,6 +14,7 @@ export default function HomePage() {
       <DailyReadings />
       <PhotoGallery /> */}
       <PriestSchedule />
+      <MassSchedule />
     </div>
   );
 }

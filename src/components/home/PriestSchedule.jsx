@@ -15,7 +15,7 @@ const priestSchedule = [
       { day: "Mercredi", hours: "14h00 - 17h00" },
       { day: "Vendredi", hours: "9h00 - 12h00" }
     ],
-    image: "../../public/pretres/Abbegabriel1.jpg" 
+    image: "../../public/pretres/Abbegabriel1.jpg"
   },
   {
     id: 2,
@@ -27,19 +27,19 @@ const priestSchedule = [
       { day: "Samedi", hours: "9h00 - 12h00" }
     ],
     image: "../../public/pretres/AbbelouisPaul.jpg"
-  },{
+  }, {
     id: 3,
     name: "Abbé Augustin Sambou",
     role: "Etudiant-Residant",
-    availability: [ ],
+    availability: [],
     image: "../../public/pretres/AbbeAugustin.jpg"
   },
   {
     id: 4,
     name: "Abbé Victor D. Faye",
     role: "Etudiant-Residant",
-    availability: [ ],
-    image: "../../public/pretres/Abbédiomaye.jpg" 
+    availability: [],
+    image: "../../public/pretres/Abbédiomaye.jpg"
   }
 ];
 
@@ -47,8 +47,8 @@ export function PriestSchedule() {
   const { theme } = useLiturgical();
 
   return (
-    <section id="horaires" className="py-16 bg-white mt-40">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="horaires" className="py-20 bg-white mt-40 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         {/* En-tête inchangé */}
         <div className="flex items-center justify-center gap-2 mb-12">
           <Calendar size={28} className={theme.textColor} />
@@ -56,6 +56,11 @@ export function PriestSchedule() {
             Permanence des prêtres
           </h2>
         </div>
+        {/* <div className="w-24 h-1 bg-gold-500 mx-auto"></div>
+        <p className="text-gray-600 max-w-2xl mx-auto">
+          Besoin de parler à un prêtre ? Retrouvez ici les horaires de permanence à la paroisse Notre-Dame des Anges.
+        </p> */}
+
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
           {priestSchedule.map((priest) => (

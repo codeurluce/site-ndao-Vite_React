@@ -11,7 +11,7 @@ const Button = ({
   const baseStyles = 'font-medium rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
 
   const variantStyles = {
-    primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
+    primary: 'bg-blue-600 text-white hover:bg-opacity-60 focus:ring-blue-500',
     secondary: 'bg-amber-500 text-white hover:bg-amber-600 focus:ring-amber-400',
     outline: 'border border-blue-600 text-blue-600 hover:bg-blue-50 focus:ring-blue-500',
     ghost: 'text-gray-700 hover:bg-gray-100 focus:ring-gray-400',
