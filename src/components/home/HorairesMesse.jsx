@@ -51,14 +51,14 @@ return (
     <div className="container mx-auto px-2"> 
       <div className="text-center mb-4"> 
         <div className="flex items-center justify-center gap-2 mb-12"> 
-          <Timer size={20} className={theme.textColor} /> 
+          <Timer size={28} className={theme.textColor} /> 
           <h2 className="text-3xl font-bold text-center"> 
             Horaires des Messes
           </h2>
         </div>
       </div>
 
-      <div className="max-w-2xl mx-auto bg-white rounded-lg shadow overflow-hidden"> 
+      <div className="max-w-2xl mx-auto bg-white rounded-lg shadow overflow-hidden mb-12"> 
         <div className="grid grid-cols-7 border-b border-gray-200">
           {days.map((day) => (
             <button
