@@ -93,7 +93,7 @@ const Navbar = () => {
 
                             {/* Archidiocèse */}
                             <div className="flex items-center mb-1">
-                                <img src="../../public/icons/archidioceseLogo1.png" alt="icon" className="w-4 mr-2" />
+                                <img src="../../public/icons/archidioceseLogo1.png" alt="icon" className="w-4 mr-4 lg:mr-6" />
                                 <span className={`font-serif font-normal text-xs`}>
                                     Archidiocèse de Dakar
                                 </span>
@@ -101,18 +101,18 @@ const Navbar = () => {
 
                             {/* Doyennée */}
                             <div className="flex items-center">
-                                <img src="../../public/icons/localisation1.png" alt="icon" className="w-4 mr-2" />
+                                <img src="../../public/icons/localisation1.png" alt="icon" className="w-4 mr-4 lg:mr-6" />
                                 <span className={`font-serif font-normal text-xs`}>
                                     Doyennée Grand Dakar/Yoff
                                 </span>
                             </div>
                         </div>
 {/* Logo et nom de l'Eglise */}
-                        <Link to="/" className="flex items-center">
+                        <Link to="/" className="flex items-center leading-none">
                             <img src="../../public/icons/eglise.png" alt="icon" className={`w-8 mr-4 ${isScrolled ? 'brightness-0 invert' : ''}`}/>
-                            <span className={`font-serif font-bold text-xl md:text-xs text-liturgical-${currentColor}-600`}>
+                            <span className={`font-serif font-bold text-xs md:text-xl block`}>
                                 Notre Dame des Anges <br />
-                                <span className="font-serif font-normal text-xs">
+                                <span className="font-serif font-normal text-xs block">
                                     Ouakam
                                 </span>
                             </span>
