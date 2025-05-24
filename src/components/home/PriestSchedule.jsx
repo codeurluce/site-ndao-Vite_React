@@ -72,12 +72,9 @@ export function PriestSchedule() {
 
               {/* Conteneur image avec effet déploiement */}
               <div
-                className="
-      relative
-      w-1/2 h-full
-      transition-all duration-500 ease-in-out
-      group-hover:absolute group-hover:inset-0 group-hover:w-full group-hover:z-20
-    "
+                className="relative w-1/2 h-full transition-all duration-500 ease-in-out 
+                          group-hover:absolute group-hover:inset-0 group-hover:w-full group-hover:z-20
+                  "
                 style={{ transitionProperty: 'all' }}
               >
                 <img
@@ -117,25 +114,6 @@ export function PriestSchedule() {
               </div>
             </div>
           ))}
-        </div>
-        <div className="mt-12 bg-gray-100 rounded-lg p-6 max-w-3xl mx-auto">
-          <h3 className="text-lg font-semibold mb-4">Horaires des messes</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <h4 className="font-medium mb-2">En semaine</h4>
-              <ul className="space-y-2 text-gray-700">
-                <li>Lundi - Vendredi: 6h30</li>
-                <li>Mercredi: 18h30</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-medium mb-2">Week-end</h4>
-              <ul className="space-y-2 text-gray-700">
-                <li>Samedi: 18h30 (Messe anticipée)</li>
-                <li>Dimanche: 8h00 et 10h30</li>
-              </ul>
-            </div>
-          </div>
         </div>
       </div>
     </section>
