@@ -110,7 +110,7 @@ const Navbar = () => {
 {/* Logo et nom de l'Eglise */}
                         <Link to="/" className="flex items-center leading-none">
                             <img src="../../public/icons/eglise.png" alt="icon" className={`w-8 mr-4 ${isScrolled ? 'brightness-0 invert' : ''}`}/>
-                            <span className={`font-serif font-bold text-xs md:text-xl block`}>
+                            <span className={`font-serif font-bold text-xs xs:text-xl block`}>
                                 Notre Dame des Anges <br />
                                 <span className="font-serif font-normal text-xs block">
                                     Ouakam

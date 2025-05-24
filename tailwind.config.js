@@ -112,6 +112,9 @@ export default {
         'xxs': '0.625rem', // 10px
         'tiny': '0.5rem',  // 8px
       },
+      screens: {
+        xs: '450px', // nouveau breakpoint à 450px
+      },
     },
   },
   plugins: [],
