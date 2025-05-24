@@ -58,8 +58,10 @@ const Navbar = () => {
     }, [location]);
 
     const getNavbarColors = () => {
-        return isScrolled ? 'bg-white shadow-md' : 'bg-transparent';
+        return isScrolled ? 'bg-gray-900 text-white img-white shadow-md' : 'bg-transparent';
+        
     };
+    
 
     const navbarClasses = `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${getNavbarColors()} ${isScrolled ? 'py-2' : 'py-4'
         }`;
@@ -107,7 +109,7 @@ const Navbar = () => {
                         </div>
 {/* Logo et nom de l'Eglise */}
                         <Link to="/" className="flex items-center">
-                            <img src="../../public/icons/eglise.png" alt="icon" className="w-8 mr-4" />
+                            <img src="../../public/icons/eglise.png" alt="icon" className={`w-8 mr-4 ${isScrolled ? 'brightness-0 invert' : ''}`}/>
                             <span className={`font-serif font-bold text-xl md:text-xs text-liturgical-${currentColor}-600`}>
                                 Notre Dame des Anges <br />
                                 <span className="font-serif font-normal text-xs">
@@ -116,10 +118,6 @@ const Navbar = () => {
                             </span>
 
                         </Link>
-
-
-
-
 
                     </div>
 
@@ -133,7 +131,6 @@ const Navbar = () => {
                             <Search size={20} />
                         </button>
 
-
                         {navItems.map((item) => (
                             <Link
                                 key={item.path}
@@ -141,10 +138,10 @@ const Navbar = () => {
                                 className={classNames(
                                     "px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300",
                                     location.pathname === item.path
-                                        ? classNames(theme.bgColor, "text-white")
+                                        ? classNames(theme.bgColor, "text-gray-900")
                                         : isScrolled
-                                            ? "text-gray-700 hover:text-gray-900 hover:bg-gray-100"
-                                            : "text-white hover:bg-white/10"
+                                            ? "text-gray-700 hover:text-gray-900 hover:bg-gray-500"
+                                            : "text-gray-700 hover:text-gray-500 hover:bg-gray-900"
                                 )}
                             >
                                 {item.name}
@@ -175,7 +172,7 @@ const Navbar = () => {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="lg:hidden bg-white shadow-md"
+                        className="lg:hidden bg-gray-900 shadow-md"
                     >
                         <div className="container mx-auto px-4 py-2">
                             {navItems.map((item) => (
@@ -204,7 +201,7 @@ const Navbar = () => {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
-                        className="absolute top-full left-0 right-0 bg-white shadow-md p-4"
+                        className="absolute top-full left-0 right-0 bg-gray-900 shadow-md p-4"
                     >
                         <form onSubmit={handleSearch} className="flex items-center">
                             <input
