@@ -12,7 +12,7 @@ export const HeroSection = () => {
         style={{
           backgroundImage: "url('/imgEglise/notredamedesanges1.jpg')",
           backgroundBlendMode: "overlay",
-          opacity: 0.5
+          opacity: 0.8
         }}
       ></div>
       

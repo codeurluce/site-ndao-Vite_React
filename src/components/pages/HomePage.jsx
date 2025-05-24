@@ -8,8 +8,8 @@ import { PriestSchedule } from '../home/PriestSchedule';
 export default function HomePage() {
   return (
     <div>
-      {/*<HeroSection />
-       <AnnouncementsSlider />
+     <HeroSection />
+       {/* <AnnouncementsSlider />
       <DailyReadings />
       <PhotoGallery /> */}
       <PriestSchedule />
