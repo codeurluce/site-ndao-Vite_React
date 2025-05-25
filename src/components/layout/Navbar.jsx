@@ -63,7 +63,7 @@ const Navbar = () => {
     };
     
 
-    const navbarClasses = `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${getNavbarColors()} ${isScrolled ? 'py-2' : 'py-4'
+    const navbarClasses = `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${getNavbarColors()} ${isScrolled ? 'py-2' : 'py-2'
         }`;
 
     const navItems = [
@@ -85,7 +85,8 @@ const Navbar = () => {
             <div className="container mx-auto px-4">
                 <div className="flex justify-between items-center">
                     <div className="flex inline-grid">
-{/* Gerer archidiocese et le doyenné */}
+                            
+                            {/* Gerer archidiocese et le doyenné */}
                         <div className={`flex flex-col items-start mb-2 ml-4 lg:ml-2
                                         overflow-hidden transition-all duration-500 ease-in-out
                                         ${isScrolled ? 'max-h-0' : 'max-h-20'}
