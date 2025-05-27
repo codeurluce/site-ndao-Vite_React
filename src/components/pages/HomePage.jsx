@@ -5,14 +5,15 @@ import { HeroSection } from '../home/HomeSection';
 // import { PhotoGallery } from '../components/home/PhotoGallery';
 import { PriestSchedule } from '../home/PriestSchedule';
 import { MassSchedule } from '../home/HorairesMesse';
+import { DailyReadings } from '../home/TextDuJour';
 
 export default function HomePage() {
   return (
     <div>
      <HeroSection />
        {/* <AnnouncementsSlider />
-      <DailyReadings />
       <PhotoGallery /> */}
+      <DailyReadings />
       <PriestSchedule />
         <MassSchedule />
     </div>
