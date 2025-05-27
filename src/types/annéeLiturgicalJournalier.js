@@ -29,7 +29,7 @@ export const joursLiturgiques2025 = {
   { date: "2025-05-24", jour: "samedi", fete: " ", lectures: ["Ac 16, 1-10", "Jn 15, 18-21"] },
   { date: "2025-05-25", jour: "dimanche", fete: "6e DIMANCHE DE PÂQUES", psautier: "II", lectures: ["Ac 15, 1-2.22-29", "Ap 21, 10-14.22-23", "Jn 14, 23-29"] },
   { date: "2025-05-26", jour: "lundi", fete: "St Philippe Néri", type: "Mémoire", lectures: ["Ac 16, 11-15", "Jn 15, 26 – 16, 4a"] },
-  { date: "2025-05-27", jour: "mardi", fete: "St Augustin de Cantorbéry", lectures: ["Ac 16, 22-34", "Jn 16, 5-11"] },
+  { date: "2025-05-27", jour: "mardi", fete: "St Augustin de Cantorbéry, évêque", lectures: ["Ac 16, 22-34", "Jn 16, 5-11"] },
   { date: "2025-05-28", jour: "mercredi", fete: " ", lectures: ["Ac 17, 15.22 – 18, 1", "Jn 16, 12-15"] },
   { date: "2025-05-29", jour: "jeudi", fete: "ASCENSION DU SEIGNEUR", type: "Solennité", lectures: ["Ac 1, 1-11", "He 9, 24-28; 10, 19-23", "Lc 24, 46-53"] },
   { date: "2025-05-30", jour: "vendredi", fete: "Ste Jeanne d’Arc", lectures: ["Ac 18, 9-18", "Jn 16, 20-23a"] },
