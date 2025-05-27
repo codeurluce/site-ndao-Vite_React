@@ -2,21 +2,33 @@
 import React, { useState } from "react";
 import { BookOpen, Book, ChevronDown, ChevronUp } from "lucide-react";
 import { useLiturgical } from '../../contexts/LiturgicalContext';
+import { joursLiturgiques2025 } from "../../types/annéeLiturgicalJournalier";
 
+// Fonction pour formater la date actuelle en français
 const getFormattedDate = () => {
   const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
   const today = new Date();
   return today.toLocaleDateString('fr-FR', options);
 };
-
+// Fonction pour capitaliser la première lettre d'une chaîne
 const capitalizeFirstLetter = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 
+// Fonction pour obtenir le jour liturgique pour une date donnée
+function getLiturgicalDayForDate(dateStr, calendar) {
+  const found = calendar.jour.find(entry => entry.date === dateStr);
+  return found ? found.fete : "Pas de fête liturgique aujourd'hui";
+}
+
+
 export const DailyReadings = () => {
+
   const { theme } = useLiturgical();
+  const today = new Date();
+  const todayStr = today.toISOString().slice(0, 10); // 'YYYY-MM-DD'
+  const liturgicalDay = getLiturgicalDayForDate(todayStr, joursLiturgiques2025);
 
   const readings = {
     date: capitalizeFirstLetter(getFormattedDate()),
-    liturgicalDay: "Mercredi de la 5ème semaine de Carême",
     readings: [
       {
         title: "Première lecture",
@@ -44,6 +56,7 @@ export const DailyReadings = () => {
     Array(readings.readings.length).fill(false)
   );
 
+  // Fonction pour basculer l'état d'expansion d'une lecture
   const toggleExpanded = (index) => {
     setExpanded((prev) => {
       const newExpanded = [...prev];
@@ -56,23 +69,25 @@ export const DailyReadings = () => {
     <section id="lectures" className="py-2 bg-gray-100 scroll-mt-16 pt-6 pb-12">
       <div className="container mx-auto px-2">
         <div className="text-center mb-4">
-          <div className="flex items-center justify-center gap-2 mb-6">
+          <div className="flex items-center justify-center gap-2 mb-2">
             <BookOpen size={28} className={theme.textColor} />
             <h2 className="text-3xl font-bold text-center">Lectures du Jour</h2>
+
           </div>
+                <p className="text-sm mb-4"> {readings.date} / {liturgicalDay} / Année: {joursLiturgiques2025.annee_liturgique} </p>
+
           <p className="text-gray-600 max-w-2xl mx-auto">
             Méditons ensemble la Parole de Dieu qui nous est donnée aujourd&apos;hui
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="bg-burgundy-50 rounded-t-xl flex items-center justify-between mb-6">
-            <div>
+          <div className="bg-burgundy-50 rounded-t-xl flex items-center justify-beetwen mb-6">
+            
               <h3 className="font-serif text-2xl font-semibold text-burgundy-700">
-                {readings.date}
-              </h3>
-              <p className="text-burgundy-600 mt-1">{readings.liturgicalDay}</p>
-            </div>
+                {readings.date} 
+                {/* <p className="text-lg">{liturgicalDay} /Année: {joursLiturgiques2025.annee_liturgique} </p> */}
+                              </h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start [grid-auto-rows:min-content] rounded-b-xl">
@@ -220,7 +235,7 @@ export default DailyReadings;
 //                                 {readings.date}
 //                             </h3>
 //                             <p className="text-burgundy-600 mt-1">
-//                                 {readings.liturgicalDay}
+//                                 {liturgicalDay}
 //                             </p>
 //                         </div>
 //                     </div>
